@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./cos/cosobjects/COSDictionary.h"
+#include "./pdf/cosobjects/COSDictionary.h"
 
 void test1(pdf::COSObjects::COSDictionary dict)
 {
