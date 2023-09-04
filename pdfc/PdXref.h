@@ -4,7 +4,7 @@
 #define OFFSETMAX 0x2540BE3FFu
 #define GENERATIONMAX 0xFFFFu
 // 交叉引用表条目
-typedef struct
+typedef struct pdXrefEntry
 {
     // 若当前条目已使用,
     // 表示当前对象相对于当前pdf文件流开头的偏移量,其值不得大于OFFSETMAX;
@@ -24,7 +24,7 @@ typedef struct
     char free;
 } pdXrefEntry, *PdXrefEntry;
 // 交叉引用表的小节(子表)
-typedef struct
+typedef struct pdXrefSubsection
 {
     // 当前小节的起始对象编号
     unsigned long long startNum;
@@ -34,7 +34,7 @@ typedef struct
 } pdXrefSubsection, *PdXrefSubsection;
 
 // 交叉引用表
-typedef struct
+typedef struct pdXref
 {
     // 持有交叉引用表的所有小节(子表)
     PdXrefSubsection sections;
