@@ -1,0 +1,5 @@
+#ifndef PCH_H
+#define PCH_H 1
+#include"template.config.h"
+#include"@BISON_FLEX_HEADER@"
+#endif
